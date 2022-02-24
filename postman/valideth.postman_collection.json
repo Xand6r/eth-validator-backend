@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "9c1f9d41-7b19-4326-a133-678c75aa5ffc",
+		"name": "valideth",
+		"description": "A collection of requests which relate to valideth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "server status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LOCAL_URL}}/",
+					"host": [
+						"{{LOCAL_URL}}"
+					],
+					"path": [
+						""
+					]
+				},
+				"description": "This route is responsible for checking the status of the server"
+			},
+			"response": [
+				{
+					"name": "server status",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL_URL}}/",
+							"host": [
+								"{{LOCAL_URL}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "173"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ad-KjiHRc+6zvcpVp4zKZY/yiIP4lY\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 24 Feb 2022 19:45:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html>\n    <head>\n        <title>validEth</title>\n        <link rel=\"stylesheet\" href=\"/stylesheets/style.css\">\n    </head>\n    <body>\n        <h1>validEth</h1>\n        <p>Welcome to validEth</p>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Validate ethereum address",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"address\": \"0x14c0157f9eEA7AEe61ba2606E75716E210b4697a\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LOCAL_URL}}/address/validate",
+					"host": [
+						"{{LOCAL_URL}}"
+					],
+					"path": [
+						"address",
+						"validate"
+					]
+				},
+				"description": "Route which is used to test out the validity of the ethereum address passed in.  \n  \nIt recieves only one parameter which is `address`"
+			},
+			"response": [
+				{
+					"name": "Validate ethereum address",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address\": \"0x14c0157f9eEA7AEe61ba2606E75716E210b4697a\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCAL_URL}}/address/validate",
+							"host": [
+								"{{LOCAL_URL}}"
+							],
+							"path": [
+								"address",
+								"validate"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1e-0oat/0lgiSNPkR9kfTNZS2wE2kY\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 24 Feb 2022 21:23:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"value\": false\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "LOCAL_URL",
+			"value": "localhost:3000",
+			"type": "string"
+		}
+	]
+}

@@ -1,0 +1,32 @@
+{
+    "name": "eidoo-backend",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "start": "node ./bin/www",
+        "dev": "nodemon ./bin/www",
+        "test": "mocha",
+        "format:check": "prettier --check .",
+        "format:write": "prettier --write .",
+        "lint:check": "eslint .",
+        "lint:fix": "eslint --fix ."
+    },
+    "dependencies": {
+        "celebrate": "^15.0.1",
+        "cookie-parser": "~1.4.4",
+        "cors": "^2.8.5",
+        "debug": "~2.6.9",
+        "express": "~4.16.1",
+        "http-errors": "~1.6.3",
+        "jade": "~1.11.0",
+        "morgan": "~1.9.1",
+        "web3": "^1.7.0"
+    },
+    "devDependencies": {
+        "chai": "^4.3.6",
+        "eslint": "^8.9.0",
+        "eslint-config-prettier": "^8.4.0",
+        "mocha": "^9.2.1",
+        "prettier": "^2.5.1"
+    }
+}
