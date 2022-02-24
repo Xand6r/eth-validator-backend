@@ -28,5 +28,4 @@ describe('addressService()', function () {
         // assert
         expect(addressIsCorrect).to.be.false
     })
-});
-
+})
